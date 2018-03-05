@@ -12,5 +12,8 @@ sdist :
 bdist :
 	python3 setup.py bdist_wheel
 
+venv :
+	python3 -m venv mvmedia.venv
+
 dev :
 	pip3 install --editable .[dev]
