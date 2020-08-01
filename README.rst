@@ -33,7 +33,7 @@ I run this on my Dropbox camera uploads every night to:
 Here's the crontab::
 
   # move dropbox camera uploads out of dropbox into media folders
-  0 2 * * * mvmedia Dropbox/Camera\ Uploads --photos=Media/Pictures --videos=Media/Videos --remove=30 --recent=30 --verbose >> /var/log/dropbox/move-media.log
+  0 2 * * * mvmedia Dropbox/Camera\ Uploads --photos=Media/Pictures --videos=Media/Videos --remove=30 --recent=30 --verbose >> /var/log/dropbox/mvmedia.log
 
 Usage
 -----

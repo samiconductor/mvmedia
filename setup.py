@@ -16,7 +16,7 @@ setup(
     license='MIT',
     description='Safely move photos and videos',
     long_description=long_description,
-    url='https://github.com/samiconductor/move-media',
+    url='https://github.com/samiconductor/mvmedia',
     author='Sam Simmons',
     author_email='sam@samiconductor.com',
     classifiers=[
@@ -40,10 +40,10 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'mvmedia=move_media:main'
+            'mvmedia=mvmedia:main'
         ],
     },
     project_urls={
-        'Source': 'https://github.com/samiconductor/move-media'
+        'Source': 'https://github.com/samiconductor/mvmedia'
     },
 )
