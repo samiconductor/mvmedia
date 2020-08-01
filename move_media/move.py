@@ -49,7 +49,16 @@ def run(source_path, dest_photos_path, dest_videos_path, keep_old_path_days, ski
         dest_path = dest_photos_path if image_mime else dest_videos_path
         date_path = dest_path / str(file_date.year)
         file_date_path = date_path / \
+            '{}{}'.format(file_date.strftime('%Y-%m-%d-%H-%M-%S'), path.suffix.lower())
+
+        # backwards compatible space in path and any case extension
+        file_date_path_with_space = date_path / \
             '{}{}'.format(file_date.strftime('%Y-%m-%d %H-%M-%S'), path.suffix)
+
+        if file_date_path_with_space.exists():
+            logging.info('Renaming old file path {} to new path {}'
+                    .format(file_date_path_with_space, file_date_path))
+            file_date_path_with_space.rename(file_date_path)
 
         if file_date_path.exists():
             source_shasum = pathutil.shasum_path(path)

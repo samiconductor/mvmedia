@@ -12,7 +12,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as readme:
 
 setup(
     name='mvmedia',
-    version='1.0.0',
+    version='1.0.1',
     license='MIT',
     description='Safely move photos and videos',
     long_description=long_description,
